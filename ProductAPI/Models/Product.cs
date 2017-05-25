@@ -3,7 +3,7 @@ using System;
 
 namespace ProductAPI
 {
-    public class Product 
+    public class Product
     {
         [JsonProperty("id")]
         public int ProductID { get; set; }
@@ -21,5 +21,7 @@ namespace ProductAPI
         public Int16 ReorderLevel { get; set; }
         [JsonProperty("discontinued")]
         public Boolean Discontinued { get; set; }
+        [JsonProperty("categoryId")]
+        public int CategoryID { get; set; }
     }
 }

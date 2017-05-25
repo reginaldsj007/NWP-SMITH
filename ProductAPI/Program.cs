@@ -52,12 +52,13 @@ namespace ProductAPI
             {
                 ContractResolver = new CamelCasePropertyNamesContractResolver()
             };
+
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
+                routeTemplate: "api/{controller}/{action}/{id}",
                 defaults: new { id = RouteParameter.Optional }
                 );
-
+            
             appBuilder.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
             appBuilder.UseWebApi(config);
             appBuilder.UseWebApi(config);
